@@ -1,14 +1,20 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+mod bus;
+
+pub use bus::Bus;
+
+pub struct DotMatrix {
+    bus: Bus,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+impl DotMatrix {
+    /// Create a new [DotMatrix].
+    pub fn new() -> DotMatrix {
+        Self { bus: Bus::new() }
+    }
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    #[cfg(test)]
+    /// Create a new [DotMatrix] with a flat [Bus] for testing purposes.
+    pub fn new_with_flat_bus() -> DotMatrix {
+        Self { bus: Bus::flat() }
     }
 }
