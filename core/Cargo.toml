@@ -1,0 +1,6 @@
+[package]
+name = "dotmatrix"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
