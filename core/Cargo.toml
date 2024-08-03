@@ -5,3 +5,8 @@ edition.workspace = true
 
 [dependencies]
 proc-bitfield.workspace = true
+
+[dev-dependencies]
+serde.workspace = true
+serde_json.workspace = true
+serde_with.workspace = true
