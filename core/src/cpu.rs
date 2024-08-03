@@ -1,0 +1,145 @@
+use proc_bitfield::bitfield;
+
+const STARTING_PC: u16 = 0x0100;
+const STARTING_SP: u16 = 0xFFFE;
+
+/// The SM83 by Sharp is the CPU used in the DMG. It is distinct from a Zilog Z80 despite several
+/// similarities.
+///
+/// Names are not short for the purpose of saving characters, these are the names the community
+/// and documentation have settled upon.
+#[derive(Clone, Eq, PartialEq)]
+pub struct Sm83 {
+    /// The general purpose registers and flags of the [Sm83].
+    pub registers: Sm83Registers,
+
+    /// The program counter, points to the next instruction in memory.
+    pub pc: u16,
+
+    /// The stack pointer, points to the "top" stack frame in memory. _(The stack grows downward)_
+    pub sp: u16,
+}
+
+impl Sm83 {
+    /// Create a new [Sm83] configured for use in a DMG.
+    pub fn new_dmg() -> Self {
+        Self {
+            registers: Sm83Registers::initial_dmg(),
+            pc: STARTING_PC,
+            sp: STARTING_SP,
+        }
+    }
+}
+
+bitfield! {
+    /// The general purpose 8 and 16 bit registers of the SM83, including the flags.
+    ///
+    /// Names are not short for the purpose of saving characters, these are the names the community
+    /// and documentation have settled upon.
+    #[derive(Clone, Copy, Eq, PartialEq)]
+    pub struct Sm83Registers(u64): Debug, FromRaw, IntoRaw, DerefRaw {
+        /// The `c` flag (carry flag) is set when a carry or borrow occurs in an arithmetic
+        /// operation. It is also the 4th bit of the virtual `F` register in AF.
+        pub c_flag: bool @ 4,
+
+        /// The `h` flag (half-carry flag) is set whenever a carry would occur 8 bits below the most
+        /// significant bit. It's used by BCD operations. It is also the 5th bit of the virtual `F`
+        /// register in AF.
+        pub h_flag: bool @ 5,
+
+        /// The `n` flag (subtraction flag) is set whenever a subtraction occurs, to assist in BCD
+        /// operations. It is also the 6th bit of the virtual `F` register in AF.
+        pub n_flag: bool @ 6,
+
+        /// The `z` flag (zero flag) is set when a calculation results in a value of `0`.
+        /// It is also the 7th bit of the virtual `F` register in AF.
+        pub z_flag: bool @ 7,
+
+        /// The `A` register is the accumulator, and is used as the high bits of AF.
+        pub a: u8 @ 8..=15,
+
+        /// The `AF` register is the A register and the flags combined. Low 4 bits are always `0`.
+        /// This is the only way to access the virtual "`F`" register.
+        pub af: u16 [get_fn(|af| af & 0xFFF0)] @ 0..=15,
+
+        /// The `C` register is a general-purpose register and the low bits of BC.
+        pub c: u8 @ 16..=23,
+
+        /// The `B` register is a general-purpose register and the high bits of BC.
+        pub b: u8 @ 24..=31,
+
+        /// The `BC` register is the B and C registers combined.
+        pub bc: u16 @ 16..=31,
+
+        /// The `E` register is a general-purpose register and the low bits of DE.
+        pub e: u8 @ 32..=39,
+
+        /// The `D` register is a general-purpose register and the high bits of DE.
+        pub d: u8 @ 40..=47,
+
+        /// The `DE` register is the D and E registers combined.
+        pub de: u16 @ 32..=47,
+
+        /// The `L` register is a general-purpose register and the low bits of HL.
+        pub l: u8 @ 48..=55,
+
+        /// The `H` register is a general-purpose register and the high bits of HL.
+        pub h: u8 @ 56..=63,
+
+        /// The `HL` register is the H and L registers combined. It's often used to hold a pointer,
+        /// and can be incremented/decremented on access by some operations.
+        pub hl: u16 @ 48..=63,
+    }
+}
+
+impl Sm83Registers {
+    /// The initial state of registers on DMG, via the Cycle Accurate GB Docs.
+    pub fn initial_dmg() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0x01_4D_00_D8_00_13_01_B0)
+    }
+
+    /// The initial state of registers on MGB, via the Cycle Accurate GB Docs.
+    pub fn initial_mgb() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0x01_4D_00_D8_00_13_FF_B0)
+    }
+
+    /// The initial state of registers on SGB, via the Cycle Accurate GB Docs.
+    ///
+    /// Note: TCAGBD states these have not been verified on hardware.
+    pub fn initial_sgb() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0xC0_60_00_00_00_14_01_00)
+    }
+
+    /// The initial state of registers on SGB2, via the Cycle Accurate GB Docs.
+    ///
+    /// Note: TCAGBD does not specify anything but the value of `A`, so I'm defaulting them to
+    /// [Registers::initial_sgb] for now. See note there.
+    pub fn initial_sgb2() -> Self {
+        let mut registers = Self::initial_sgb();
+
+        registers.set_a(0xFF);
+
+        registers
+    }
+
+    /// The initial state of registers on CGB, via the Cycle Accurate GB Docs.
+    pub fn initial_cgb() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0x00_7C_00_08_00_00_11_80)
+    }
+
+    /// The initial state of registers on AGB, via the Cycle Accurate GB Docs.
+    pub fn initial_agb() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0x00_7C_00_08_01_00_11_00)
+    }
+
+    /// The initial state of registers on AGS, via the Cycle Accurate GB Docs.
+    pub fn initial_ags() -> Self {
+        //   0xHH_LL_DD_EE_BB_CC_AA_FF
+        Self(0x00_7C_00_08_01_00_11_00)
+    }
+}
