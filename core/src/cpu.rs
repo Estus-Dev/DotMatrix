@@ -1,3 +1,5 @@
+use std::fmt::Debug;
+
 use proc_bitfield::bitfield;
 
 const STARTING_PC: u16 = 0x0100;
@@ -28,6 +30,30 @@ impl Sm83 {
             pc: STARTING_PC,
             sp: STARTING_SP,
         }
+    }
+}
+
+impl Debug for Sm83 {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Sm83 {{ ")?;
+
+        write!(f, "A:{:02X} ", self.registers.a())?;
+        write!(f, "B:{:02X} ", self.registers.b())?;
+        write!(f, "C:{:02X} ", self.registers.c())?;
+        write!(f, "D:{:02X} ", self.registers.d())?;
+        write!(f, "E:{:02X} ", self.registers.e())?;
+        write!(f, "H:{:02X} ", self.registers.h())?;
+        write!(f, "L:{:02X} ", self.registers.l())?;
+
+        write!(f, "c:{:01} ", self.registers.c_flag() as usize)?;
+        write!(f, "h:{:01} ", self.registers.h_flag() as usize)?;
+        write!(f, "n:{:01} ", self.registers.n_flag() as usize)?;
+        write!(f, "z:{:01} ", self.registers.z_flag() as usize)?;
+
+        write!(f, "SP:{:04X} ", self.sp)?;
+        write!(f, "PC:{:04X} ", self.pc)?;
+
+        write!(f, "}}")
     }
 }
 
@@ -141,5 +167,26 @@ impl Sm83Registers {
     pub fn initial_ags() -> Self {
         //   0xHH_LL_DD_EE_BB_CC_AA_FF
         Self(0x00_7C_00_08_01_00_11_00)
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use crate::cpu::Sm83Registers;
+
+    use super::Sm83;
+
+    #[test]
+    fn sm83_debug() {
+        let registers = Sm83Registers(0x01_23_45_67_89_AB_CD_50);
+        let cpu = Sm83 {
+            registers,
+            pc: 0x532D,
+            sp: 0xA801,
+        };
+        let expected =
+            "Sm83 { A:CD B:89 C:AB D:45 E:67 H:01 L:23 c:1 h:0 n:1 z:0 SP:A801 PC:532D }";
+
+        assert_eq!(expected, &format!("{cpu:?}"));
     }
 }
