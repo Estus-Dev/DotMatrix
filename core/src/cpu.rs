@@ -38,17 +38,15 @@ impl Debug for Sm83 {
         write!(f, "Sm83 {{ ")?;
 
         write!(f, "A:{:02X} ", self.registers.a())?;
-        write!(f, "B:{:02X} ", self.registers.b())?;
-        write!(f, "C:{:02X} ", self.registers.c())?;
-        write!(f, "D:{:02X} ", self.registers.d())?;
-        write!(f, "E:{:02X} ", self.registers.e())?;
-        write!(f, "H:{:02X} ", self.registers.h())?;
-        write!(f, "L:{:02X} ", self.registers.l())?;
 
         write!(f, "c:{:01} ", self.registers.c_flag() as usize)?;
         write!(f, "h:{:01} ", self.registers.h_flag() as usize)?;
         write!(f, "n:{:01} ", self.registers.n_flag() as usize)?;
         write!(f, "z:{:01} ", self.registers.z_flag() as usize)?;
+
+        write!(f, "BC:{:04X} ", self.registers.bc())?;
+        write!(f, "DE:{:04X} ", self.registers.de())?;
+        write!(f, "HL:{:04X} ", self.registers.hl())?;
 
         write!(f, "SP:{:04X} ", self.sp)?;
         write!(f, "PC:{:04X} ", self.pc)?;
@@ -178,14 +176,13 @@ mod test {
 
     #[test]
     fn sm83_debug() {
+        let expected = "Sm83 { A:CD c:1 h:0 n:1 z:0 BC:89AB DE:4567 HL:0123 SP:A801 PC:532D }";
         let registers = Sm83Registers(0x01_23_45_67_89_AB_CD_50);
         let cpu = Sm83 {
             registers,
             pc: 0x532D,
             sp: 0xA801,
         };
-        let expected =
-            "Sm83 { A:CD B:89 C:AB D:45 E:67 H:01 L:23 c:1 h:0 n:1 z:0 SP:A801 PC:532D }";
 
         assert_eq!(expected, &format!("{cpu:?}"));
     }
