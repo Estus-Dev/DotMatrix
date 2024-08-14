@@ -82,11 +82,18 @@ bitfield! {
         /// It is also the 7th bit of the virtual `F` register in AF.
         pub z_flag: bool @ 7,
 
+        /// The virtual "`F`" register is comprised of flags, in the form z/n/h/c/0/0/0/0. It is
+        /// used as the low bits of AF.
+        ///
+        /// This virtual register is not accessed by the hardware except in the combined case of
+        /// `AF`. It's provided here for the sake of testing, deugging, visualization, or logging.
+        pub f: u8 [get_fn(|f| f & 0xF0)] @ 0..=7,
+
         /// The `A` register is the accumulator, and is used as the high bits of AF.
         pub a: u8 @ 8..=15,
 
         /// The `AF` register is the A register and the flags combined. Low 4 bits are always `0`.
-        /// This is the only way to access the virtual "`F`" register.
+        /// This is the only way the hardware accesses the virtual "`F`" register.
         pub af: u16 [get_fn(|af| af & 0xFFF0)] @ 0..=15,
 
         /// The `C` register is a general-purpose register and the low bits of BC.
