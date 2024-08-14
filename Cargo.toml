@@ -7,6 +7,7 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace.dependencies]
+paste = "1.0.15"
 proc-bitfield = "0.4.0"
 serde = "1.0.204"
 serde_json = "1.0.122"
