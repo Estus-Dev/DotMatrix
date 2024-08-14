@@ -2,8 +2,11 @@ use std::fmt::Debug;
 
 use proc_bitfield::bitfield;
 
-const STARTING_PC: u16 = 0x0100;
-const STARTING_SP: u16 = 0xFFFE;
+/// The value of PC _after running the boot ROM_.
+const AFTER_BOOT_PC: u16 = 0x0100;
+
+/// The value of SP _after running the boot ROM_.
+const AFTER_BOOT_SP: u16 = 0xFFFE;
 
 /// The SM83 by Sharp is the CPU used in the DMG. It is distinct from a Zilog Z80 despite several
 /// similarities.
@@ -27,8 +30,8 @@ impl Sm83 {
     pub fn new_dmg() -> Self {
         Self {
             registers: Sm83Registers::initial_dmg(),
-            pc: STARTING_PC,
-            sp: STARTING_SP,
+            pc: AFTER_BOOT_PC,
+            sp: AFTER_BOOT_SP,
         }
     }
 }
