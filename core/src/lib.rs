@@ -13,7 +13,7 @@ impl DotMatrix {
     /// Create a new [DotMatrix] DMG.
     pub fn new_dmg() -> DotMatrix {
         Self {
-            bus: Bus::new(),
+            bus: Bus::new_dmg(),
             cpu: Sm83::new_dmg(),
         }
     }
