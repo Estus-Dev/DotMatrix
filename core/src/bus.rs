@@ -52,8 +52,8 @@ impl Bus {
 }
 
 impl Bus {
-    /// Create a new [Bus] with the standard memory map.
-    pub fn new() -> Self {
+    /// Create a new [Bus] with the standard memory map for the DMG.
+    pub fn new_dmg() -> Self {
         // TODO: Proper memory map
         const RAM: Page = Page::new_ram();
 
