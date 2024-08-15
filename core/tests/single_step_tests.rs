@@ -61,7 +61,7 @@ fn test_opcode(opcode: &str) {
 /// Load a test file from disk matching the given opcode.
 fn load_test(opcode: &str) -> Vec<SM83TestCase> {
     let path = format!(
-        "../test_roms/single_step_tests/v1/{}.json",
+        "../test_data/single_step_tests/v1/{}.json",
         opcode.to_lowercase()
     );
     let json = fs::read(Path::new(&path)).unwrap_or_else(|_| {
