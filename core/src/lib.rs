@@ -19,7 +19,6 @@ impl DotMatrix {
     }
 
     /// Create a new [DotMatrix] DMG with a flat [Bus] for testing purposes.
-    #[cfg(test)]
     pub fn new_with_flat_bus() -> DotMatrix {
         Self {
             bus: Bus::flat(),

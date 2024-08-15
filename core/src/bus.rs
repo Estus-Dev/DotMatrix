@@ -63,7 +63,6 @@ impl Bus {
     /// Create a new [Bus] with nothing but RAM for use with the [Single Step Tests][].
     ///
     /// [Single Step Tests]: https://github.com/SingleStepTests/sm83
-    #[cfg(test)]
     pub fn flat() -> Self {
         const RAM: Page = Page::new_ram();
 

@@ -34,6 +34,11 @@ impl Sm83 {
             sp: AFTER_BOOT_SP,
         }
     }
+
+    pub fn exec(&mut self) {
+        // TODO
+        self.pc += 1;
+    }
 }
 
 impl Debug for Sm83 {
