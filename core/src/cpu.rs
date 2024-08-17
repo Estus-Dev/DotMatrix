@@ -66,11 +66,8 @@ impl Sm83 {
             self.fetch(bus);
         }
 
-        while !self.mcode_queue.is_empty() {
-            self.mcode_queue
-                .pop_front()
-                .expect("Just verified queue is not empty")
-                .exec(self, bus);
+        while let Some(mcode) = self.mcode_queue.pop_front() {
+            mcode.exec(self, bus);
         }
     }
 
