@@ -25,4 +25,11 @@ impl DotMatrix {
             cpu: Sm83::new_dmg(),
         }
     }
+
+    /// Execute until the end of the current CPU instruction. Fetches if queue is empty.
+    ///
+    /// For testing purposes, specifically SingleStepTests.
+    pub fn exec_instruction(&mut self) {
+        self.cpu.exec_instruction(&mut self.bus);
+    }
 }

@@ -1,6 +1,12 @@
-use std::fmt::Debug;
+mod mcode;
+
+use std::{collections::VecDeque, fmt::Debug};
 
 use proc_bitfield::bitfield;
+
+use mcode::MCode;
+
+use crate::Bus;
 
 /// The value of PC _after running the boot ROM_.
 const AFTER_BOOT_PC: u16 = 0x0100;
@@ -23,6 +29,9 @@ pub struct Sm83 {
 
     /// The stack pointer, points to the "top" stack frame in memory. _(The stack grows downward)_
     pub sp: u16,
+
+    /// A queue of m-codes to be executed over the next few cycles.
+    pub mcode_queue: VecDeque<MCode>,
 }
 
 impl Sm83 {
@@ -32,11 +41,43 @@ impl Sm83 {
             registers: Sm83Registers::initial_dmg(),
             pc: AFTER_BOOT_PC,
             sp: AFTER_BOOT_SP,
+            mcode_queue: VecDeque::with_capacity(8),
         }
     }
 
-    pub fn exec(&mut self) {
+    /// Execute one m-cycle worth of code on the CPU.
+    pub fn exec_m_cycle(&mut self, bus: &mut Bus) {
+        // Fetching the next instruction and executing the current overlap by one m-cycle.
+        if self.mcode_queue.len() <= 1 {
+            self.fetch(bus);
+        }
+
+        self.mcode_queue
+            .pop_front()
+            .expect("Attempted to pop from empty mcode_queue")
+            .exec(self, bus);
+    }
+
+    /// Execute until the end of the current instruction. Fetches an instruction if queue is empty.
+    ///
+    /// For testing purposes, specifically SingleStepTests.
+    pub fn exec_instruction(&mut self, bus: &mut Bus) {
+        if self.mcode_queue.is_empty() {
+            self.fetch(bus);
+        }
+
+        while !self.mcode_queue.is_empty() {
+            self.mcode_queue
+                .pop_front()
+                .expect("Just verified queue is not empty")
+                .exec(self, bus);
+        }
+    }
+
+    /// Retrieve the next instruction and
+    pub fn fetch(&mut self, _bus: &mut Bus) {
         // TODO
+        self.mcode_queue.push_back(MCode::Nop);
         self.pc += 1;
     }
 }
@@ -185,6 +226,8 @@ impl Sm83Registers {
 
 #[cfg(test)]
 mod test {
+    use std::collections::VecDeque;
+
     use crate::cpu::Sm83Registers;
 
     use super::Sm83;
@@ -197,6 +240,7 @@ mod test {
             registers,
             pc: 0x532D,
             sp: 0xA801,
+            mcode_queue: VecDeque::with_capacity(0),
         };
 
         assert_eq!(expected, &format!("{cpu:?}"));

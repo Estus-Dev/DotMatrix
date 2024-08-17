@@ -42,7 +42,7 @@ fn test_opcode(opcode: &str) {
     for case in cases {
         let mut dmg: DotMatrix = case.initial_state.clone().into();
 
-        dmg.cpu.exec();
+        dmg.exec_instruction();
 
         let addrs: Vec<u16> = case.final_state.ram.iter().map(|(addr, _)| *addr).collect();
         let dmg_state = State::new(&dmg, &addrs);
