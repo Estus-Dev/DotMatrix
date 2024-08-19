@@ -1,5 +1,5 @@
 [workspace]
-members = ["core"]
+members = ["core", "opcodes"]
 resolver = "2"
 
 [workspace.package]
@@ -7,8 +7,14 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace.dependencies]
+anyhow = "1.0.83"
+dotmatrix_opcodes.path = "./opcodes"
 paste = "1.0.15"
+prettyplease = "0.2.20"
 proc-bitfield = "0.4.0"
+proc-macro2 = "1.0.82"
+quote = "1.0.36"
 serde = "1.0.204"
 serde_json = "1.0.122"
 serde_with = "3.9.0"
+syn = "2.0.63"
