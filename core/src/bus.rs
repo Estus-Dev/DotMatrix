@@ -36,18 +36,33 @@ impl Page {
 pub struct Bus([Page; PAGE_COUNT]);
 
 impl Bus {
-    /// Read a value from the specified address.
+    /// Read an 8-bit value from the specified address.
     pub fn read(&self, addr: u16) -> u8 {
         let [index, page] = addr.to_le_bytes();
 
         self.0[page as usize].read(index)
     }
 
-    /// Write a value to the specified address.
+    /// Read a 16-bit little-endian value from the specified address.
+    pub fn read16(&self, addr: u16) -> u16 {
+        // Note that `addr + 1` could cross a page boundary or wrap around to 0x0000.
+        u16::from_le_bytes([self.read(addr), self.read(addr + 1)])
+    }
+
+    /// Write an 8-bit value to the specified address.
     pub fn write(&mut self, addr: u16, value: u8) {
         let [index, page] = addr.to_le_bytes();
 
         self.0[page as usize].write(index, value);
+    }
+
+    /// Write a 16-bit little-endian value to the specified address.
+    pub fn write16(&mut self, addr: u16, value: u16) {
+        let [low, high] = value.to_le_bytes();
+
+        // Note that `addr + 1` could cross a page boundary or wrap around to 0x0000.
+        self.write(addr, low);
+        self.write(addr + 1, high);
     }
 }
 
