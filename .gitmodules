@@ -1,3 +1,6 @@
 [submodule "test_roms/single_step_tests"]
 	path = test_data/single_step_tests
 	url = git@github.com:SingleStepTests/sm83.git
+[submodule "test_data/blargg"]
+	path = test_data/blargg
+	url = git@github.com:retrio/gb-test-roms.git
