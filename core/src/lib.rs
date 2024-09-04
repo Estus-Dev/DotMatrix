@@ -1,12 +1,17 @@
 mod bus;
+mod cartridge;
 mod cpu;
 
+use std::rc::Rc;
+
 pub use bus::Bus;
+use cartridge::Cartridge;
 use cpu::Sm83;
 
 pub struct DotMatrix {
     pub bus: Bus,
     pub cpu: Sm83,
+    pub cartridge: Option<Rc<Cartridge>>,
 }
 
 impl DotMatrix {
@@ -15,6 +20,7 @@ impl DotMatrix {
         Self {
             bus: Bus::new_dmg(),
             cpu: Sm83::new_dmg(),
+            cartridge: None,
         }
     }
 
@@ -23,7 +29,12 @@ impl DotMatrix {
         Self {
             bus: Bus::flat(),
             cpu: Sm83::new_dmg(),
+            cartridge: None,
         }
+    }
+
+    pub fn load(&mut self, rom: Box<[u8]>) {
+        self.cartridge = Some(Rc::new(Cartridge::new(rom)));
     }
 
     /// Execute until the end of the current CPU instruction. Fetches if queue is empty.
