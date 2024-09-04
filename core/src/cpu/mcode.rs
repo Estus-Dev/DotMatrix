@@ -13,13 +13,19 @@ use super::Sm83;
 /// [Gekkio](https://github.com/Gekkio).
 #[derive(Clone, Copy, Eq, PartialEq)]
 pub enum MCode {
-    /// Perform no action
+    /// Perform no action.
     Nop,
+
+    /// An illegal instruction, halts execution immediately.
+    Illegal,
 }
 
 impl MCode {
     pub fn exec(&self, _cpu: &mut Sm83, _bus: &mut Bus) {
-        // TODO
+        match self {
+            Self::Nop => (),
+            Self::Illegal => panic!("Illegal instruction encountered"),
+        }
     }
 }
 
@@ -30,6 +36,7 @@ impl FromStr for MCode {
 
         Ok(match mcode {
             "NOP" => M::Nop,
+            "ILLEGAL" => M::Illegal,
             _ => return Err(()),
         })
     }
