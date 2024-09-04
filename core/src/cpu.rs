@@ -74,7 +74,7 @@ impl Sm83 {
     /// Retrieve the next instruction and increment PC.
     pub fn fetch(&mut self, _bus: &mut Bus) {
         // TODO
-        self.mcode_queue.push_back(MCode::Nop);
+        self.mcode_queue.push_back(MCode::Illegal);
         self.pc += 1;
     }
 }
