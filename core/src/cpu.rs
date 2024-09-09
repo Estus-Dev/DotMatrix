@@ -2,6 +2,7 @@ mod mcode;
 
 use std::{collections::VecDeque, fmt::Debug};
 
+use dotmatrix_opcodes::Opcode;
 use proc_bitfield::bitfield;
 
 use mcode::MCode;
@@ -30,6 +31,9 @@ pub struct Sm83 {
     /// The stack pointer, points to the "top" stack frame in memory. _(The stack grows downward)_
     pub sp: u16,
 
+    /// The instruction register holds the opcode of the currently executing instruction.
+    pub ir: Opcode,
+
     /// A queue of m-codes to be executed over the next few cycles.
     pub mcode_queue: VecDeque<MCode>,
 }
@@ -41,6 +45,7 @@ impl Sm83 {
             registers: Sm83Registers::initial_dmg(),
             pc: AFTER_BOOT_PC,
             sp: AFTER_BOOT_SP,
+            ir: Opcode::NOP,
             mcode_queue: VecDeque::with_capacity(8),
         }
     }
@@ -72,8 +77,8 @@ impl Sm83 {
     }
 
     /// Retrieve the next instruction and increment PC.
-    pub fn fetch(&mut self, _bus: &mut Bus) {
-        // TODO
+    pub fn fetch(&mut self, bus: &mut Bus) {
+        self.ir = bus.read(self.pc).into();
         self.mcode_queue.push_back(MCode::Illegal);
         self.pc += 1;
     }
@@ -225,9 +230,7 @@ impl Sm83Registers {
 mod test {
     use std::collections::VecDeque;
 
-    use crate::cpu::Sm83Registers;
-
-    use super::Sm83;
+    use super::*;
 
     #[test]
     fn sm83_debug() {
@@ -237,6 +240,7 @@ mod test {
             registers,
             pc: 0x532D,
             sp: 0xA801,
+            ir: Opcode::NOP,
             mcode_queue: VecDeque::with_capacity(0),
         };
 

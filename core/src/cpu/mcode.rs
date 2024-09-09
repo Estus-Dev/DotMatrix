@@ -21,10 +21,13 @@ pub enum MCode {
 }
 
 impl MCode {
-    pub fn exec(&self, _cpu: &mut Sm83, _bus: &mut Bus) {
+    pub fn exec(&self, cpu: &mut Sm83, _bus: &mut Bus) {
         match self {
             Self::Nop => (),
-            Self::Illegal => panic!("Illegal instruction encountered"),
+            Self::Illegal => panic!(
+                "Illegal instruction encountered: {:#04X} {:?}",
+                cpu.ir as u8, cpu.ir
+            ),
         }
     }
 }

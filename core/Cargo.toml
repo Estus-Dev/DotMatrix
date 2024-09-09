@@ -4,6 +4,7 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
+dotmatrix_opcodes.workspace = true
 proc-bitfield.workspace = true
 
 [dev-dependencies]

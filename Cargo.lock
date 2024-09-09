@@ -121,6 +121,7 @@ dependencies = [
 name = "dotmatrix"
 version = "0.1.0"
 dependencies = [
+ "dotmatrix_opcodes",
  "paste",
  "proc-bitfield",
  "serde",
