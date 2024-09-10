@@ -26,12 +26,17 @@ fn build_opcodes_file(opcodes: &[Opcode]) -> Result<syn::File> {
         shebang: None,
         attrs: vec![],
         items: vec![
+            syn::parse2(build_imports())?,
             syn::parse2(build_enum(opcodes))?,
             syn::parse2(build_from(opcodes))?,
-            syn::parse2(build_length(opcodes))?,
             syn::parse2(build_display(opcodes))?,
+            syn::parse2(build_impl(opcodes))?,
         ],
     })
+}
+
+fn build_imports() -> TokenStream {
+    quote! { use crate::mcode::MCode; }
 }
 
 fn build_enum(opcodes: &[Opcode]) -> TokenStream {
@@ -71,19 +76,32 @@ fn build_from(opcodes: &[Opcode]) -> TokenStream {
     }
 }
 
-fn build_length(opcodes: &[Opcode]) -> TokenStream {
-    let opcodes = opcodes.iter().map(|op| {
+fn build_impl(opcodes: &[Opcode]) -> TokenStream {
+    let lengths = opcodes.iter().map(|op| {
         let id = format_ident!("{}", op.id);
         let length = op.length;
 
         quote! { Self::#id => #length }
     });
 
+    let mcodes = opcodes.iter().map(|op| {
+        let id = format_ident!("{}", op.id);
+        let mcodes = op.mcode.iter().map(|mcode| format_ident!("{}", mcode));
+
+        quote! { Self::#id => vec![#(MCode::#mcodes),*] }
+    });
+
     quote! {
         impl Opcode {
             pub fn length(&self) -> usize {
                 match self {
-                    #(#opcodes),*
+                    #(#lengths),*
+                }
+            }
+
+            pub fn mcode(&self) -> Vec<MCode> {
+                match self {
+                    #(#mcodes),*
                 }
             }
         }
@@ -116,4 +134,5 @@ struct Opcode {
     id: String,
     mnemonic: Vec<String>,
     length: usize,
+    mcode: Vec<String>,
 }

@@ -3,61 +3,61 @@
     "id": "NOP",
     "mnemonic": ["NOP"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 1,
     "id": "LD_BC_n16",
     "mnemonic": ["LD BC, n16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 2,
     "id": "LD_PTR_BC_A",
     "mnemonic": ["LD [BC], A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 3,
     "id": "INC_BC",
     "mnemonic": ["INC BC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 4,
     "id": "INC_B",
     "mnemonic": ["INC B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 5,
     "id": "DEC_B",
     "mnemonic": ["DEC B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 6,
     "id": "LD_B_n8",
     "mnemonic": ["LD B, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 7,
     "id": "RLCA",
     "mnemonic": ["RLCA"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 8,
     "id": "LD_a16_SP",
     "mnemonic": ["LD [a16], SP"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 9,
     "id": "ADD_HL_BC",
     "mnemonic": ["ADD HL, BC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 10,
     "id": "LD_PTR_BC",
@@ -66,97 +66,97 @@
         "LD [BC]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 11,
     "id": "DEC_BC",
     "mnemonic": ["DEC BC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 12,
     "id": "INC_C",
     "mnemonic": ["INC C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 13,
     "id": "DEC_C",
     "mnemonic": ["DEC C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 14,
     "id": "LD_C_n8",
     "mnemonic": ["LD C, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 15,
     "id": "RRCA",
     "mnemonic": ["RRCA"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 16,
     "id": "STOP",
     "mnemonic": ["STOP"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 17,
     "id": "LD_DE_n16",
     "mnemonic": ["LD DE, n16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 18,
     "id": "LD_PTR_DE_A",
     "mnemonic": ["LD [DE], A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 19,
     "id": "INC_DE",
     "mnemonic": ["INC DE"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 20,
     "id": "INC_D",
     "mnemonic": ["INC D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 21,
     "id": "DEC_D",
     "mnemonic": ["DEC D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 22,
     "id": "LD_D_n8",
     "mnemonic": ["LD D, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 23,
     "id": "RLA",
     "mnemonic": ["RLA"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 24,
     "id": "JR",
     "mnemonic": ["JR e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 25,
     "id": "LD_HL_DE",
     "mnemonic": ["LD HL, DE"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 26,
     "id": "LD_PTR_DE",
@@ -165,49 +165,49 @@
         "LD [DE]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 27,
     "id": "DEC_DE",
     "mnemonic": ["DEC DE"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 28,
     "id": "INC_E",
     "mnemonic": ["INC E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 29,
     "id": "DEC_E",
     "mnemonic": ["DEC E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 30,
     "id": "LD_E_n8",
     "mnemonic": ["LD E, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 31,
     "id": "RRA",
     "mnemonic": ["RRA"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 32,
     "id": "JR_NZ",
     "mnemonic": ["JR NZ e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 33,
     "id": "LD_HL_n16",
     "mnemonic": ["LD HL, n16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 34,
     "id": "LD_PTR_HLI_A",
@@ -217,49 +217,49 @@
         "LDI [HL], A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 35,
     "id": "INC_HL",
     "mnemonic": ["INC HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 36,
     "id": "INC_H",
     "mnemonic": ["INC H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 37,
     "id": "DEC_H",
     "mnemonic": ["DEC H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 38,
     "id": "LD_H_n8",
     "mnemonic": ["LD H, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 39,
     "id": "DAA",
     "mnemonic": ["DAA"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 40,
     "id": "JR_Z",
     "mnemonic": ["JR Z e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 41,
     "id": "ADD_HL_HL",
     "mnemonic": ["ADD HL, HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 42,
     "id": "LD_A_PTR_HLI",
@@ -269,49 +269,49 @@
         "LDI A, [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 43,
     "id": "DEC_HL",
     "mnemonic": ["DEC HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 44,
     "id": "INC_L",
     "mnemonic": ["INC L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 45,
     "id": "DEC_L",
     "mnemonic": ["DEC L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 46,
     "id": "LD_L_n8",
     "mnemonic": ["LD L, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 47,
     "id": "CPL",
     "mnemonic": ["CPL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 48,
     "id": "JR_NC",
     "mnemonic": ["JR NC e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 49,
     "id": "LD_SP_n16",
     "mnemonic": ["LD SP, n16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 50,
     "id": "LD_PTR_HLD_A",
@@ -321,49 +321,49 @@
         "LDD [HL], A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 51,
     "id": "INC_SP",
     "mnemonic": ["INC SP"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 52,
     "id": "INC_PTR_HL",
     "mnemonic": ["INC [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 53,
     "id": "DEC_PTR_HL",
     "mnemonic": ["DEC [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 54,
     "id": "LD_PTR_HL_n8",
     "mnemonic": ["LD [HL], n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 55,
     "id": "SCF",
     "mnemonic": ["SCF"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 56,
     "id": "JR_C",
     "mnemonic": ["JR C e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 57,
     "id": "ADD_HL_SP",
     "mnemonic": ["ADD HL, SP"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 58,
     "id": "LD_A_PTR_HLD",
@@ -373,421 +373,421 @@
         "LDD A, [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 59,
     "id": "DEC_SP",
     "mnemonic": ["DEC SP"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 60,
     "id": "INC_A",
     "mnemonic": ["INC A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 61,
     "id": "DEC_A",
     "mnemonic": ["DEC A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 62,
     "id": "LD_A_n8",
     "mnemonic": ["LD A, n8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 63,
     "id": "CCF",
     "mnemonic": ["CCF"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 64,
     "id": "LD_B_B",
     "mnemonic": ["LD B, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 65,
     "id": "LD_B_C",
     "mnemonic": ["LD B, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 66,
     "id": "LD_B_D",
     "mnemonic": ["LD B, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 67,
     "id": "LD_B_E",
     "mnemonic": ["LD B, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 68,
     "id": "LD_B_H",
     "mnemonic": ["LD B, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 69,
     "id": "LD_B_L",
     "mnemonic": ["LD B, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 70,
     "id": "LD_B_PTR_HL",
     "mnemonic": ["LD B, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 71,
     "id": "LD_B_A",
     "mnemonic": ["LD B, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 72,
     "id": "LD_C_B",
     "mnemonic": ["LD C, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 73,
     "id": "LD_C_C",
     "mnemonic": ["LD C, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 74,
     "id": "LD_C_D",
     "mnemonic": ["LD C, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 75,
     "id": "LD_C_E",
     "mnemonic": ["LD C, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 76,
     "id": "LD_C_H",
     "mnemonic": ["LD C, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 77,
     "id": "LD_C_L",
     "mnemonic": ["LD C, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 78,
     "id": "LD_C_PTR_HL",
     "mnemonic": ["LD C, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 79,
     "id": "LD_C_A",
     "mnemonic": ["LD C, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 80,
     "id": "LD_D_B",
     "mnemonic": ["LD D, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 81,
     "id": "LD_D_C",
     "mnemonic": ["LD D, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 82,
     "id": "LD_D_D",
     "mnemonic": ["LD D, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 83,
     "id": "LD_D_E",
     "mnemonic": ["LD D, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 84,
     "id": "LD_D_H",
     "mnemonic": ["LD D, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 85,
     "id": "LD_D_L",
     "mnemonic": ["LD D, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 86,
     "id": "LD_D_PTR_HL",
     "mnemonic": ["LD D, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 87,
     "id": "LD_D_A",
     "mnemonic": ["LD D, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 88,
     "id": "LD_E_B",
     "mnemonic": ["LD E, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 89,
     "id": "LD_E_C",
     "mnemonic": ["LD E, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 90,
     "id": "LD_E_D",
     "mnemonic": ["LD E, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 91,
     "id": "LD_E_E",
     "mnemonic": ["LD E, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 92,
     "id": "LD_E_H",
     "mnemonic": ["LD E, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 93,
     "id": "LD_E_L",
     "mnemonic": ["LD E, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 94,
     "id": "LD_E_PTR_HL",
     "mnemonic": ["LD E, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 95,
     "id": "LD_E_A",
     "mnemonic": ["LD E, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 96,
     "id": "LD_H_B",
     "mnemonic": ["LD H, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 97,
     "id": "LD_H_C",
     "mnemonic": ["LD H, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 98,
     "id": "LD_H_D",
     "mnemonic": ["LD H, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 99,
     "id": "LD_H_E",
     "mnemonic": ["LD H, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 100,
     "id": "LD_H_H",
     "mnemonic": ["LD H, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 101,
     "id": "LD_H_L",
     "mnemonic": ["LD H, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 102,
     "id": "LD_H_PTR_HL",
     "mnemonic": ["LD H, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 103,
     "id": "LD_H_A",
     "mnemonic": ["LD H, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 104,
     "id": "LD_L_B",
     "mnemonic": ["LD L, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 105,
     "id": "LD_L_C",
     "mnemonic": ["LD L, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 106,
     "id": "LD_L_D",
     "mnemonic": ["LD L, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 107,
     "id": "LD_L_E",
     "mnemonic": ["LD L, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 108,
     "id": "LD_L_H",
     "mnemonic": ["LD L, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 109,
     "id": "LD_L_L",
     "mnemonic": ["LD L, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 110,
     "id": "LD_L_PTR_HL",
     "mnemonic": ["LD L, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 111,
     "id": "LD_L_A",
     "mnemonic": ["LD L, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 112,
     "id": "LD_PTR_HL_B",
     "mnemonic": ["LD [HL], B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 113,
     "id": "LD_PTR_HL_C",
     "mnemonic": ["LD [HL], C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 114,
     "id": "LD_PTR_HL_D",
     "mnemonic": ["LD [HL], D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 115,
     "id": "LD_PTR_HL_E",
     "mnemonic": ["LD [HL], E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 116,
     "id": "LD_PTR_HL_H",
     "mnemonic": ["LD [HL], H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 117,
     "id": "LD_PTR_HL_L",
     "mnemonic": ["LD [HL], L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 118,
     "id": "HALT",
     "mnemonic": ["HALT"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 119,
     "id": "LD_PTR_HL_A",
     "mnemonic": ["LD [HL], A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 120,
     "id": "LD_A_B",
     "mnemonic": ["LD A, B"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 121,
     "id": "LD_A_C",
     "mnemonic": ["LD A, C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 122,
     "id": "LD_A_D",
     "mnemonic": ["LD A, D"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 123,
     "id": "LD_A_E",
     "mnemonic": ["LD A, E"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 124,
     "id": "LD_A_H",
     "mnemonic": ["LD A, H"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 125,
     "id": "LD_A_L",
     "mnemonic": ["LD A, L"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 126,
     "id": "LD_A_PTR_HL",
     "mnemonic": ["LD A, [HL]"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 127,
     "id": "LD_A_A",
     "mnemonic": ["LD A, A"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 128,
     "id": "ADD_B",
@@ -796,7 +796,7 @@
         "ADD B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 129,
     "id": "ADD_C",
@@ -805,7 +805,7 @@
         "ADD C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 130,
     "id": "ADD_D",
@@ -814,7 +814,7 @@
         "ADD D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 131,
     "id": "ADD_E",
@@ -823,7 +823,7 @@
         "ADD E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 132,
     "id": "ADD_H",
@@ -832,7 +832,7 @@
         "ADD H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 133,
     "id": "ADD_L",
@@ -841,7 +841,7 @@
         "ADD L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 134,
     "id": "ADD_PTR_HL",
@@ -850,7 +850,7 @@
         "ADD [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 135,
     "id": "ADD_A",
@@ -859,7 +859,7 @@
         "ADD A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 136,
     "id": "ADC_B",
@@ -868,7 +868,7 @@
         "ADC B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 137,
     "id": "ADC_C",
@@ -877,7 +877,7 @@
         "ADC C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 138,
     "id": "ADC_D",
@@ -886,7 +886,7 @@
         "ADC D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 139,
     "id": "ADC_E",
@@ -895,7 +895,7 @@
         "ADC E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 140,
     "id": "ADC_H",
@@ -904,7 +904,7 @@
         "ADC H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 141,
     "id": "ADC_L",
@@ -913,7 +913,7 @@
         "ADC L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 142,
     "id": "ADC_PTR_HL",
@@ -922,7 +922,7 @@
         "ADC [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 143,
     "id": "ADC_A",
@@ -931,7 +931,7 @@
         "ADC A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 144,
     "id": "SUB_B",
@@ -940,7 +940,7 @@
         "SUB B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 145,
     "id": "SUB_C",
@@ -949,7 +949,7 @@
         "SUB C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 146,
     "id": "SUB_D",
@@ -958,7 +958,7 @@
         "SUB D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 147,
     "id": "SUB_E",
@@ -967,7 +967,7 @@
         "SUB E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 148,
     "id": "SUB_H",
@@ -976,7 +976,7 @@
         "SUB H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 149,
     "id": "SUB_L",
@@ -985,7 +985,7 @@
         "SUB L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 150,
     "id": "SUB_PTR_HL",
@@ -994,7 +994,7 @@
         "SUB [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 151,
     "id": "SUB_A",
@@ -1003,7 +1003,7 @@
         "SUB A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 152,
     "id": "SBC_B",
@@ -1012,7 +1012,7 @@
         "SBC B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 153,
     "id": "SBC_C",
@@ -1021,7 +1021,7 @@
         "SBC C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 154,
     "id": "SBC_D",
@@ -1030,7 +1030,7 @@
         "SBC D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 155,
     "id": "SBC_E",
@@ -1039,7 +1039,7 @@
         "SBC E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 156,
     "id": "SBC_H",
@@ -1048,7 +1048,7 @@
         "SBC H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 157,
     "id": "SBC_L",
@@ -1057,7 +1057,7 @@
         "SBC L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 158,
     "id": "SBC_PTR_HL",
@@ -1066,7 +1066,7 @@
         "SBC [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 159,
     "id": "SBC_A",
@@ -1075,7 +1075,7 @@
         "SBC A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 160,
     "id": "AND_B",
@@ -1084,7 +1084,7 @@
         "AND B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 161,
     "id": "AND_C",
@@ -1093,7 +1093,7 @@
         "AND C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 162,
     "id": "AND_D",
@@ -1102,7 +1102,7 @@
         "AND D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 163,
     "id": "AND_E",
@@ -1111,7 +1111,7 @@
         "AND E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 164,
     "id": "AND_H",
@@ -1120,7 +1120,7 @@
         "AND H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 165,
     "id": "AND_L",
@@ -1129,7 +1129,7 @@
         "AND L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 166,
     "id": "AND_PTR_HL",
@@ -1138,7 +1138,7 @@
         "AND [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 167,
     "id": "AND_A",
@@ -1147,7 +1147,7 @@
         "AND A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 168,
     "id": "XOR_B",
@@ -1156,7 +1156,7 @@
         "XOR B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 169,
     "id": "XOR_C",
@@ -1165,7 +1165,7 @@
         "XOR C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 170,
     "id": "XOR_D",
@@ -1174,7 +1174,7 @@
         "XOR D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 171,
     "id": "XOR_E",
@@ -1183,7 +1183,7 @@
         "XOR E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 172,
     "id": "XOR_H",
@@ -1192,7 +1192,7 @@
         "XOR H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 173,
     "id": "XOR_L",
@@ -1201,7 +1201,7 @@
         "XOR L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 174,
     "id": "XOR_PTR_HL",
@@ -1210,7 +1210,7 @@
         "XOR [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 175,
     "id": "XOR_A",
@@ -1219,7 +1219,7 @@
         "XOR A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 176,
     "id": "OR_B",
@@ -1228,7 +1228,7 @@
         "OR B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 177,
     "id": "OR_C",
@@ -1237,7 +1237,7 @@
         "OR C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 178,
     "id": "OR_D",
@@ -1246,7 +1246,7 @@
         "OR D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 179,
     "id": "OR_E",
@@ -1255,7 +1255,7 @@
         "OR E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 180,
     "id": "OR_H",
@@ -1264,7 +1264,7 @@
         "OR H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 181,
     "id": "OR_L",
@@ -1273,7 +1273,7 @@
         "OR L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 182,
     "id": "OR_PTR_HL",
@@ -1282,7 +1282,7 @@
         "OR [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 183,
     "id": "OR_A",
@@ -1291,7 +1291,7 @@
         "OR A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 184,
     "id": "CP_B",
@@ -1300,7 +1300,7 @@
         "CP B"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 185,
     "id": "CP_C",
@@ -1309,7 +1309,7 @@
         "CP C"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 186,
     "id": "CP_D",
@@ -1318,7 +1318,7 @@
         "CP D"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 187,
     "id": "CP_E",
@@ -1327,7 +1327,7 @@
         "CP E"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 188,
     "id": "CP_H",
@@ -1336,7 +1336,7 @@
         "CP H"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 189,
     "id": "CP_L",
@@ -1345,7 +1345,7 @@
         "CP L"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 190,
     "id": "CP_PTR_HL",
@@ -1354,7 +1354,7 @@
         "CP [HL]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 191,
     "id": "CP_A",
@@ -1363,43 +1363,43 @@
         "CP A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 192,
     "id": "RET_NZ",
     "mnemonic": ["RET NZ"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 193,
     "id": "POP_BC",
     "mnemonic": ["POP BC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 194,
     "id": "JP_NZ_a16",
     "mnemonic": ["JP NZ, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 195,
     "id": "JP_a16",
     "mnemonic": ["JP a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 196,
     "id": "CALL_NZ_a16",
     "mnemonic": ["CALL NZ, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 197,
     "id": "PUSH_BC",
     "mnemonic": ["PUSH BC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 198,
     "id": "ADD_n8",
@@ -1408,49 +1408,49 @@
         "ADD n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 199,
     "id": "RST_00",
     "mnemonic": ["RST $00"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 200,
     "id": "RET_Z",
     "mnemonic": ["RET Z"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 201,
     "id": "RET",
     "mnemonic": ["RET"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 202,
     "id": "JP_Z_a16",
     "mnemonic": ["JP Z, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 203,
     "id": "PrefixCB",
     "mnemonic": [""],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 204,
     "id": "CALL_Z_a16",
     "mnemonic": ["CALL Z, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 205,
     "id": "CALL_a16",
     "mnemonic": ["CALL a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 206,
     "id": "ADC_n8",
@@ -1459,49 +1459,49 @@
         "ADC n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 207,
     "id": "RST_08",
     "mnemonic": ["RST $08"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 208,
     "id": "RET_NC",
     "mnemonic": ["RET NC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 209,
     "id": "POP_DE",
     "mnemonic": ["POP DE"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 210,
     "id": "JP_NC_a16",
     "mnemonic": ["JP NC, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 211,
     "id": "ILLEGAL_D3",
     "mnemonic": ["$D3"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 212,
     "id": "CALL_NC_a16",
     "mnemonic": ["CALL NC, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 213,
     "id": "PUSH_DE",
     "mnemonic": ["PUSH DE"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 214,
     "id": "SUB_n8",
@@ -1510,49 +1510,49 @@
         "SUB n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 215,
     "id": "RST_10",
     "mnemonic": ["RST $10"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 216,
     "id": "RET_C",
     "mnemonic": ["RET C"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 217,
     "id": "RETI",
     "mnemonic": ["RETI"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 218,
     "id": "JP_C_a16",
     "mnemonic": ["JP C, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 219,
     "id": "ILLEGAL_DB",
     "mnemonic": ["$DB"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 220,
     "id": "CALL_C_a16",
     "mnemonic": ["CALL C, a16"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 221,
     "id": "ILLEGAL_DD",
     "mnemonic": ["$DD"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 222,
     "id": "SBC_n8",
@@ -1561,13 +1561,13 @@
         "SBC n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 223,
     "id": "RST_18",
     "mnemonic": ["RST $18"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 224,
     "id": "LDH_a8_A",
@@ -1576,13 +1576,13 @@
         "LDH [a8], A"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 225,
     "id": "POP_HL",
     "mnemonic": ["POP HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 226,
     "id": "LD_PTR_C_A",
@@ -1591,25 +1591,25 @@
         "LD [C], A"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 227,
     "id": "ILLEGAL_E3",
     "mnemonic": ["$E3"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 228,
     "id": "ILLEGAL_E4",
     "mnemonic": ["$E4"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 229,
     "id": "PUSH_HL",
     "mnemonic": ["PUSH HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 230,
     "id": "AND_n8",
@@ -1618,49 +1618,49 @@
         "AND n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 231,
     "id": "RST_20",
     "mnemonic": ["RST $20"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 232,
     "id": "ADD_SP_Offset",
     "mnemonic": ["ADD SP, e8"],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 233,
     "id": "JP_HL",
     "mnemonic": ["JP HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 234,
     "id": "LD_a16_A",
     "mnemonic": ["LD [a16], A"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 235,
     "id": "ILLEGAL_EB",
     "mnemonic": ["$EB"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 236,
     "id": "ILLEGAL_EC",
     "mnemonic": ["$EC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 237,
     "id": "ILLEGAL_ED",
     "mnemonic": ["$ED"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 238,
     "id": "XOR_n8",
@@ -1669,13 +1669,13 @@
         "XOR n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 239,
     "id": "RST_28",
     "mnemonic": ["RST $28"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 240,
     "id": "LDH_A_a8",
@@ -1684,13 +1684,13 @@
         "LDH A, [a8]"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 241,
     "id": "POP_AF",
     "mnemonic": ["POP AF"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 242,
     "id": "LD_A_PTR_C",
@@ -1699,25 +1699,25 @@
         "LD A [C]"
     ],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 243,
     "id": "DI",
     "mnemonic": ["DI"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 244,
     "id": "ILLEGAL_F4",
     "mnemonic": ["$F4"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 245,
     "id": "PUSH_AF",
     "mnemonic": ["PUSH AF"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 246,
     "id": "OR_n8",
@@ -1726,13 +1726,13 @@
         "OR n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 247,
     "id": "RST_30",
     "mnemonic": ["RST $30"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 248,
     "id": "LD_HL_SP_Offset",
@@ -1741,37 +1741,37 @@
         "LDHL SP, e8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 249,
     "id": "LD_SP_HL",
     "mnemonic": ["LD SP, HL"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 250,
     "id": "LD_A_a16",
     "mnemonic": ["LD A, [a16]"],
     "length": 3,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 251,
     "id": "EI",
     "mnemonic": ["EI"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 252,
     "id": "ILLEGAL_FC",
     "mnemonic": ["$FC"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 253,
     "id": "ILLEGAL_FD",
     "mnemonic": ["$FD"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 254,
     "id": "CP_n8",
@@ -1780,11 +1780,11 @@
         "CP n8"
     ],
     "length": 2,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 },{
     "opcode": 255,
     "id": "RST_38",
     "mnemonic": ["RST $38"],
     "length": 1,
-    "mcode": ["NOP"]
+    "mcode": ["Nop"]
 }]

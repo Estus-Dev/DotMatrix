@@ -78,7 +78,11 @@ impl Sm83 {
     /// Retrieve the next instruction and increment PC.
     pub fn fetch(&mut self, bus: &mut Bus) {
         self.ir = bus.read(self.pc).into();
-        self.mcode_queue.push_back(MCode::Illegal);
+        self.ir
+            .mcode()
+            .iter()
+            .for_each(|&mcode| self.mcode_queue.push_back(mcode));
+
         self.pc += 1;
     }
 
