@@ -93,7 +93,7 @@ fn build_impl(opcodes: &[Opcode]) -> TokenStream {
 
     quote! {
         impl Opcode {
-            pub fn length(&self) -> usize {
+            pub fn length(&self) -> u16 {
                 match self {
                     #(#lengths),*
                 }
@@ -133,6 +133,6 @@ struct Opcode {
     opcode: u8,
     id: String,
     mnemonic: Vec<String>,
-    length: usize,
+    length: u16,
     mcode: Vec<String>,
 }

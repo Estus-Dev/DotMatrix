@@ -83,7 +83,7 @@ impl Sm83 {
             .iter()
             .for_each(|&mcode| self.mcode_queue.push_back(mcode));
 
-        self.pc += 1;
+        self.pc = self.pc.wrapping_add(self.ir.length());
     }
 
     fn exec_mcode(&mut self, mcode: MCode, _bus: &mut Bus) {
