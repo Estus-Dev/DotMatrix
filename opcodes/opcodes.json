@@ -1436,7 +1436,7 @@
 },{
     "opcode": 203,
     "id": "PrefixCB",
-    "mnemonic": [],
+    "mnemonic": [""],
     "length": 1,
     "mcode ": ["NOP"]
 },{
