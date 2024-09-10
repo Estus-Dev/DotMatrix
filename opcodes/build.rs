@@ -28,6 +28,7 @@ fn build_opcodes_file(opcodes: &[Opcode]) -> Result<syn::File> {
         items: vec![
             syn::parse2(build_enum(opcodes))?,
             syn::parse2(build_from(opcodes))?,
+            syn::parse2(build_display(opcodes))?,
         ],
     })
 }
@@ -64,6 +65,26 @@ fn build_from(opcodes: &[Opcode]) -> TokenStream {
                 match opcode {
                     #(#opcodes),*
                 }
+            }
+        }
+    }
+}
+
+fn build_display(opcodes: &[Opcode]) -> TokenStream {
+    let opcodes = opcodes.iter().map(|op| {
+        let id = format_ident!("{}", op.id);
+        println!("{id}");
+        let mnemonic = op.mnemonic.first().unwrap();
+
+        quote! { Self::#id => #mnemonic }
+    });
+
+    quote! {
+        impl std::fmt::Display for Opcode {
+            fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                write!(f, "{}", match self {
+                    #(#opcodes),*
+                })
             }
         }
     }

@@ -25,7 +25,7 @@ impl MCode {
         match self {
             Self::Nop => (),
             Self::Illegal => panic!(
-                "Illegal instruction encountered: {:#04X} {:?}",
+                "Illegal instruction encountered: {:#04X} ({})",
                 cpu.ir as u8, cpu.ir
             ),
         }
