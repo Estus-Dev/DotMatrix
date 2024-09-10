@@ -28,6 +28,7 @@ fn build_opcodes_file(opcodes: &[Opcode]) -> Result<syn::File> {
         items: vec![
             syn::parse2(build_enum(opcodes))?,
             syn::parse2(build_from(opcodes))?,
+            syn::parse2(build_length(opcodes))?,
             syn::parse2(build_display(opcodes))?,
         ],
     })
@@ -63,6 +64,25 @@ fn build_from(opcodes: &[Opcode]) -> TokenStream {
         impl From<u8> for Opcode {
             fn from(opcode: u8) -> Self {
                 match opcode {
+                    #(#opcodes),*
+                }
+            }
+        }
+    }
+}
+
+fn build_length(opcodes: &[Opcode]) -> TokenStream {
+    let opcodes = opcodes.iter().map(|op| {
+        let id = format_ident!("{}", op.id);
+        let length = op.length;
+
+        quote! { Self::#id => #length }
+    });
+
+    quote! {
+        impl Opcode {
+            pub fn length(&self) -> usize {
+                match self {
                     #(#opcodes),*
                 }
             }
