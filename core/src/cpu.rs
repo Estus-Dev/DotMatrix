@@ -1,11 +1,8 @@
-mod mcode;
-
 use std::{collections::VecDeque, fmt::Debug};
 
+use dotmatrix_opcodes::MCode;
 use dotmatrix_opcodes::Opcode;
 use proc_bitfield::bitfield;
-
-use mcode::MCode;
 
 use crate::Bus;
 
@@ -57,10 +54,12 @@ impl Sm83 {
             self.fetch(bus);
         }
 
-        self.mcode_queue
+        let mcode = self
+            .mcode_queue
             .pop_front()
-            .expect("Attempted to pop from empty mcode_queue")
-            .exec(self, bus);
+            .expect("Attempted to pop from empty mcode_queue");
+
+        self.exec_mcode(mcode, bus);
     }
 
     /// Execute until the end of the current instruction. Fetches an instruction if queue is empty.
@@ -72,7 +71,7 @@ impl Sm83 {
         }
 
         while let Some(mcode) = self.mcode_queue.pop_front() {
-            mcode.exec(self, bus);
+            self.exec_mcode(mcode, bus);
         }
     }
 
@@ -81,6 +80,16 @@ impl Sm83 {
         self.ir = bus.read(self.pc).into();
         self.mcode_queue.push_back(MCode::Illegal);
         self.pc += 1;
+    }
+
+    fn exec_mcode(&mut self, mcode: MCode, _bus: &mut Bus) {
+        match mcode {
+            MCode::Nop => (),
+            MCode::Illegal => panic!(
+                "Illegal instruction encountered: {:#04X} ({})",
+                self.ir as u8, self.ir
+            ),
+        }
     }
 }
 
